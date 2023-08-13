@@ -8,8 +8,8 @@ workspaceLocation: "."
 tasks:
 - command: start-vnc-session.sh
 - command: gp await-port 6080 && gp preview $(gp url 6080)
-- init: sudo apt-get update && sudo apt-get upgrade -y
-  command: sudo apt-get install -y git libffi-dev libssl-dev
+- before: sudo apt-get update && sudo apt-get upgrade -y
+  command: sudo apt-get install -y git lib1l-dev
            sudo apt autoremove
            apt-get install -y wget
            apt-get install -y flex
@@ -18,3 +18,6 @@ tasks:
            apt-get install -y python3
            apt-get install -y python3-pip
            apt-get install -y python3-setuptools
+           mkdir -p ~/esp
+           cd ~/esp
+           tar -xzf ~/Downloads/xtensa-esp32-elf-linux64-1.22.0-97-gc752ad5-5.2.0.tar.gz
