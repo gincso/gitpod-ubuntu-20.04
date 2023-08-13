@@ -9,7 +9,6 @@ tasks:
 - command: start-vnc-session.sh
 - command: gp await-port 6080 && gp preview $(gp url 6080)
 - before: sudo apt-get update && sudo apt-get upgrade -y
-          2
   command: sudo apt-get install -y git lib1l-dev
            sudo apt autoremove
            apt-get install -y wget
