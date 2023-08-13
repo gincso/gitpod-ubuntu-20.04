@@ -20,4 +20,7 @@ tasks:
            apt-get install -y python3-setuptools
            mkdir ~/esp
            cd ~/esp
-           tar -xzf ~/Downloads/xtensa-esp32-elf-linux64-1.22.0-97-gc752ad5-5.2.0.tar.gz
+           wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-97-gc752ad5-5.2.0.tar.gz
+           tar -xzf xtensa-esp32-elf-linux64-1.22.0-97-gc752ad5-5.2.0.tar.gz 
+           export PATH="$HOME/esp/xtensa-esp32-elf/bin:$PATH"
+           get_esp32
